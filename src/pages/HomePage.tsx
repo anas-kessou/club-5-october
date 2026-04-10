@@ -52,7 +52,7 @@ const tagMap: Record<string, {cls: string, label: string}> = {
 };
 
 export function HomePage() {
-  const logoSrc = `${import.meta.env.BASE_URL}cafe-logo.png`;
+  const logoSrc = `${import.meta.env.BASE_URL}cafe-logo.svg`;
   const [mobileOpen, setMobileOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [currentTab, setCurrentTab] = useState('all');
@@ -173,29 +173,11 @@ export function HomePage() {
             
             {/* Logo */}
             <a href="#hero" style={{textDecoration:'none', display:'flex', alignItems:'center', gap:'12px', flexShrink:0}}>
-              <div
-                style={{
-                  width:'56px',
-                  height:'56px',
-                  borderRadius:'16px',
-                  background:'linear-gradient(135deg, rgba(62,160,74,0.9), rgba(0,93,109,0.92))',
-                  border:'1px solid rgba(255,255,255,0.34)',
-                  boxShadow:'0 10px 24px rgba(0,0,0,0.28)',
-                  padding:'4px',
-                  flexShrink:0,
-                  display:'flex',
-                  alignItems:'center',
-                  justifyContent:'center'
-                }}
-              >
-                <div style={{width:'100%', height:'100%', borderRadius:'12px', background:'rgba(255,255,255,0.96)', display:'flex', alignItems:'center', justifyContent:'center', padding:'4px'}}>
-                  <img
-                    src={logoSrc}
-                    alt="Club 5 Octobre"
-                    style={{width:'100%', height:'100%', objectFit:'contain'}}
-                  />
-                </div>
-              </div>
+              <img
+                src={logoSrc}
+                alt="Club 5 Octobre"
+                style={{ height: '64px', width: 'auto', objectFit: 'contain' }}
+              />
               <div>
                 <div className="nav-logo-text" style={{fontSize:'1.05rem', lineHeight:1.2}}>Club 5 Octobre</div>
                 <div className="nav-logo-sub">Mohammedia · Espace 5 Octobre</div>

@@ -6,18 +6,14 @@ import { cn } from '@/lib/utils'
 import { Button } from '@/components/ui/button'
 
 export function Navbar() {
-  const logoSrc = `${import.meta.env.BASE_URL}cafe-logo.png`
+  const logoSrc = `${import.meta.env.BASE_URL}cafe-logo.svg`
   const [open, setOpen] = useState(false)
 
   return (
     <header className="sticky top-0 z-40 border-b bg-background/95 backdrop-blur">
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 py-3 md:px-8">
         <Link to="/" className="flex items-center gap-3">
-          <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-[#3ea04a] to-[#005d6d] p-0.5 shadow-md">
-            <div className="flex h-full w-full items-center justify-center rounded-[10px] bg-white p-1">
-              <img src={logoSrc} alt="Club 5 Octobre" className="h-full w-full object-contain" />
-            </div>
-          </div>
+          <img src={logoSrc} alt="Club 5 Octobre" className="h-14 w-auto object-contain drop-shadow-sm" />
           <div>
             <p className="font-display text-lg font-bold text-fm6e-dark">Club 5 Octobre</p>
             <p className="text-xs text-muted-foreground">Espace 5 Octobre · Mohammedia</p>
