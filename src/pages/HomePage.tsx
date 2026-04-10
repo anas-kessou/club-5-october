@@ -168,17 +168,18 @@ export function HomePage() {
     <div>
       {/* ===== NAVBAR ===== */}
       <nav id="navbar" className={scrolled ? 'scrolled' : ''}>
-        <div style={{maxWidth:'1280px', margin:'0 auto', padding:'0 20px'}}>
-          <div style={{display:'flex', alignItems:'center', justifyContent:'space-between', height:'72px', gap:'16px'}}>
+        <div className="home-navbar-shell" style={{maxWidth:'1280px', margin:'0 auto', padding:'0 20px'}}>
+          <div className="home-navbar-inner" style={{display:'flex', alignItems:'center', justifyContent:'space-between', height:'72px', gap:'16px'}}>
             
             {/* Logo */}
-            <a href="#hero" style={{textDecoration:'none', display:'flex', alignItems:'center', gap:'12px', flexShrink:0}}>
+            <a href="#hero" className="home-navbar-brand" style={{textDecoration:'none', display:'flex', alignItems:'center', gap:'12px', flexShrink:0}}>
               <img
                 src={logoSrc}
                 alt="Club 5 Octobre"
+                className="home-navbar-logo"
                 style={{ height: '64px', width: 'auto', objectFit: 'contain' }}
               />
-              <div>
+              <div className="home-navbar-brand-text">
                 <div className="nav-logo-text" style={{fontSize:'1.05rem', lineHeight:1.2}}>Club 5 Octobre</div>
                 <div className="nav-logo-sub">Mohammedia · Espace 5 Octobre</div>
               </div>
@@ -196,7 +197,7 @@ export function HomePage() {
             </div>
 
             {/* Right actions */}
-            <div style={{display:'flex', alignItems:'center', gap:'10px', flexShrink:0}}>
+            <div className="home-navbar-actions" style={{display:'flex', alignItems:'center', gap:'10px', flexShrink:0}}>
               <div style={{gap:'6px'}} className="hidden lg:flex">
                 <a href="#" className="social-icon" title="Instagram" aria-label="Instagram">
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="none" stroke="currentColor" strokeWidth="2"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" fill="none" stroke="currentColor" strokeWidth="2"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/></svg>
@@ -211,7 +212,7 @@ export function HomePage() {
               <button
                 id="hamburger"
                 onClick={toggleMobile}
-                className="flex flex-col lg:hidden"
+                className="home-hamburger flex flex-col lg:hidden"
                 style={{
                   gap:'5px',
                   cursor:'pointer',
