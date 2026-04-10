@@ -52,6 +52,7 @@ const tagMap: Record<string, {cls: string, label: string}> = {
 };
 
 export function HomePage() {
+  const logoSrc = `${import.meta.env.BASE_URL}cafe-logo.png`;
   const [mobileOpen, setMobileOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [currentTab, setCurrentTab] = useState('all');
@@ -172,12 +173,28 @@ export function HomePage() {
             
             {/* Logo */}
             <a href="#hero" style={{textDecoration:'none', display:'flex', alignItems:'center', gap:'12px', flexShrink:0}}>
-              <div style={{width:'44px', height:'44px', borderRadius:'50%', background:'linear-gradient(135deg,#3ea04a,#005d6d)', display:'flex', alignItems:'center', justifyContent:'center', flexShrink:0}}>
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M12 2C9 2 4 5 4 12c0 2 .5 4 2 6h12c1.5-2 2-4 2-6 0-7-5-10-8-10z" fill="white" opacity="0.9"/>
-                  <path d="M12 4C10 6 8 9 8 12h8c0-3-2-6-4-8z" fill="white" opacity="0.5"/>
-                  <rect x="11" y="14" width="2" height="5" rx="1" fill="white"/>
-                </svg>
+              <div
+                style={{
+                  width:'56px',
+                  height:'56px',
+                  borderRadius:'16px',
+                  background:'linear-gradient(135deg, rgba(62,160,74,0.9), rgba(0,93,109,0.92))',
+                  border:'1px solid rgba(255,255,255,0.34)',
+                  boxShadow:'0 10px 24px rgba(0,0,0,0.28)',
+                  padding:'4px',
+                  flexShrink:0,
+                  display:'flex',
+                  alignItems:'center',
+                  justifyContent:'center'
+                }}
+              >
+                <div style={{width:'100%', height:'100%', borderRadius:'12px', background:'rgba(255,255,255,0.96)', display:'flex', alignItems:'center', justifyContent:'center', padding:'4px'}}>
+                  <img
+                    src={logoSrc}
+                    alt="Club 5 Octobre"
+                    style={{width:'100%', height:'100%', objectFit:'contain'}}
+                  />
+                </div>
               </div>
               <div>
                 <div className="nav-logo-text" style={{fontSize:'1.05rem', lineHeight:1.2}}>Club 5 Octobre</div>
@@ -186,7 +203,7 @@ export function HomePage() {
             </a>
 
             {/* Desktop Nav */}
-            <div style={{display:'flex', alignItems:'center', gap:'20px'}} id="desktopNav" className="hidden lg:flex">
+            <div style={{alignItems:'center', gap:'20px'}} id="desktopNav" className="hidden lg:flex">
               <a href="#hero" className="nav-link" style={{display:'none'}} id="navAccueil">Accueil</a>
               <a href="#menu" className="nav-link">Menu</a>
               <a href="#espace" className="nav-link">Espace Rencontres</a>
@@ -198,7 +215,7 @@ export function HomePage() {
 
             {/* Right actions */}
             <div style={{display:'flex', alignItems:'center', gap:'10px', flexShrink:0}}>
-              <div style={{display:'flex', gap:'6px'}} className="hidden md:flex">
+              <div style={{gap:'6px'}} className="hidden lg:flex">
                 <a href="#" className="social-icon" title="Instagram" aria-label="Instagram">
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="none" stroke="currentColor" strokeWidth="2"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" fill="none" stroke="currentColor" strokeWidth="2"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/></svg>
                 </a>
@@ -209,14 +226,7 @@ export function HomePage() {
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
                 </a>
               </div>
-              <a href="https://fm6e.org" target="_blank" rel="noreferrer" className="fm6e-badge fm6e-badge-dark hidden xl:inline-flex" style={{fontSize:'0.62rem'}}>
-                <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                Partenaire FM6E
-              </a>
-              <button onClick={openModal} className="btn-primary hidden sm:inline-block" style={{fontSize:'0.78rem', padding:'9px 18px'}}>
-                Réserver l'Espace
-              </button>
-              <button id="hamburger" onClick={toggleMobile} className="lg:hidden" style={{display:'flex', flexDirection:'column', gap:'5px', cursor:'pointer', padding:'8px', border:'none', background:'none', zIndex:1001}} aria-label="Menu">
+              <button id="hamburger" onClick={toggleMobile} className="flex flex-col lg:hidden" style={{gap:'5px', cursor:'pointer', padding:'8px', border:'none', background:'none', zIndex:1001}} aria-label="Menu">
                 <span id="hb1" style={{display:'block', width:'22px', height:'2px', background: scrolled ? '#1f2937' : '#fff', transition:'all 0.3s', borderRadius:'2px'}}></span>
                 <span id="hb2" style={{display:'block', width:'22px', height:'2px', background: scrolled ? '#1f2937' : '#fff', transition:'all 0.3s', borderRadius:'2px'}}></span>
                 <span id="hb3" style={{display:'block', width:'22px', height:'2px', background: scrolled ? '#1f2937' : '#fff', transition:'all 0.3s', borderRadius:'2px'}}></span>
@@ -243,6 +253,16 @@ export function HomePage() {
         <div style={{marginTop:'20px'}}>
           <button onClick={() => { openModal(); toggleMobile(); }} className="btn-primary">Réserver l'Espace Rencontres</button>
         </div>
+        <a
+          href="https://fm6e.org"
+          target="_blank"
+          rel="noreferrer"
+          className="fm6e-badge fm6e-badge-dark"
+          style={{marginTop:'14px', textDecoration:'none', display:'inline-flex', fontSize:'0.72rem'}}
+        >
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          Partenaire FM6E
+        </a>
         <div style={{display:'flex', gap:'12px', marginTop:'20px'}}>
           <a href="#" className="social-icon social-icon-dark" title="Instagram">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5" strokeLinecap="round"/></svg>
