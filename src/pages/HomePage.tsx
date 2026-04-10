@@ -208,10 +208,66 @@ export function HomePage() {
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
                 </a>
               </div>
-              <button id="hamburger" onClick={toggleMobile} className="flex flex-col lg:hidden" style={{gap:'5px', cursor:'pointer', padding:'8px', border:'none', background:'none', zIndex:1001}} aria-label="Menu">
-                <span id="hb1" style={{display:'block', width:'22px', height:'2px', background: scrolled ? '#1f2937' : '#fff', transition:'all 0.3s', borderRadius:'2px'}}></span>
-                <span id="hb2" style={{display:'block', width:'22px', height:'2px', background: scrolled ? '#1f2937' : '#fff', transition:'all 0.3s', borderRadius:'2px'}}></span>
-                <span id="hb3" style={{display:'block', width:'22px', height:'2px', background: scrolled ? '#1f2937' : '#fff', transition:'all 0.3s', borderRadius:'2px'}}></span>
+              <button
+                id="hamburger"
+                onClick={toggleMobile}
+                className="flex flex-col lg:hidden"
+                style={{
+                  gap:'5px',
+                  cursor:'pointer',
+                  width:'44px',
+                  height:'44px',
+                  padding:'10px',
+                  borderRadius:'12px',
+                  border: scrolled ? '1px solid rgba(15,23,42,0.12)' : '1px solid rgba(255,255,255,0.45)',
+                  background: scrolled ? 'rgba(255,255,255,0.96)' : 'rgba(15,23,42,0.38)',
+                  boxShadow: scrolled ? '0 8px 18px rgba(15,23,42,0.12)' : '0 8px 18px rgba(0,0,0,0.22)',
+                  backdropFilter:'blur(10px)',
+                  WebkitBackdropFilter:'blur(10px)',
+                  zIndex:1001,
+                  justifyContent:'center',
+                  alignItems:'center',
+                  flexShrink:0,
+                }}
+                aria-label={mobileOpen ? 'Fermer le menu' : 'Ouvrir le menu'}
+                aria-expanded={mobileOpen}
+              >
+                <span
+                  id="hb1"
+                  style={{
+                    display:'block',
+                    width:'22px',
+                    height:'2.5px',
+                    background: scrolled ? '#0f172a' : '#ffffff',
+                    transition:'all 0.3s ease',
+                    borderRadius:'999px',
+                    transform: mobileOpen ? 'translateY(7px) rotate(45deg)' : 'none'
+                  }}
+                ></span>
+                <span
+                  id="hb2"
+                  style={{
+                    display:'block',
+                    width:'22px',
+                    height:'2.5px',
+                    background: scrolled ? '#0f172a' : '#ffffff',
+                    transition:'all 0.25s ease',
+                    borderRadius:'999px',
+                    opacity: mobileOpen ? 0 : 1
+                  }}
+                ></span>
+                <span
+                  id="hb3"
+                  style={{
+                    display:'block',
+                    width:'22px',
+                    height:'2.5px',
+                    background: scrolled ? '#0f172a' : '#ffffff',
+                    transition:'all 0.3s ease',
+                    borderRadius:'999px',
+                    transform: mobileOpen ? 'translateY(-8px) rotate(-45deg)' : 'none'
+                  }}
+                ></span>
               </button>
             </div>
           </div>
