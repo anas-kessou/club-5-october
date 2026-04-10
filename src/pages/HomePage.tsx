@@ -323,34 +323,34 @@ export function HomePage() {
         <div style={{position:'absolute', bottom:'20%', right:'5%', width:'150px', height:'150px', borderRadius:'50%', border:'1px solid rgba(62,160,74,0.2)', zIndex:1}}></div>
 
         <div className="hero-content" style={{padding:'20px', maxWidth:'860px'}}>
-          <div style={{marginBottom:'24px'}}>
-            <a href="https://fm6e.org" target="_blank" rel="noreferrer" className="fm6e-badge" style={{background:'rgba(62,160,74,0.15)', borderColor:'rgba(62,160,74,0.4)', color:'#86efac', fontSize:'0.72rem', textDecoration:'none'}}>
+          <div className="hero-badge-wrap" style={{marginBottom:'24px'}}>
+            <a href="https://fm6e.org" target="_blank" rel="noreferrer" className="fm6e-badge hero-fm6e-badge" style={{background:'rgba(62,160,74,0.15)', borderColor:'rgba(62,160,74,0.4)', color:'#86efac', fontSize:'0.72rem', textDecoration:'none'}}>
               <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
               Fier Partenaire de la Fondation Mohammed VI pour la Protection de l'Environnement
             </a>
           </div>
-          <h1 className="font-playfair" style={{fontSize:'clamp(2.4rem,6vw,4.2rem)', fontWeight:700, color:'#fff', lineHeight:1.15, marginBottom:'16px', textShadow:'0 2px 20px rgba(0,0,0,0.4)'}}>
+          <h1 className="font-playfair hero-title" style={{fontSize:'clamp(2.4rem,6vw,4.2rem)', fontWeight:700, color:'#fff', lineHeight:1.15, marginBottom:'16px', textShadow:'0 2px 20px rgba(0,0,0,0.4)'}}>
             Club 5 Octobre<br/>
             <span style={{color:'var(--gold)', fontStyle:'italic'}}>Mohammedia</span>
           </h1>
-          <p style={{fontSize:'clamp(1rem,2.5vw,1.25rem)', color:'rgba(255,255,255,0.85)', letterSpacing:'0.2em', textTransform:'uppercase', marginBottom:'14px', fontWeight:300}}>
+          <p className="hero-subtitle" style={{fontSize:'clamp(1rem,2.5vw,1.25rem)', color:'rgba(255,255,255,0.85)', letterSpacing:'0.2em', textTransform:'uppercase', marginBottom:'14px', fontWeight:300}}>
             Café &nbsp;·&nbsp; Restaurant &nbsp;·&nbsp; Espace de Rencontres
           </p>
-          <p className="font-amiri" style={{fontSize:'clamp(1.1rem,2.5vw,1.4rem)', color:'var(--gold)', marginBottom:'36px', fontStyle:'italic', opacity:0.95}}>
+          <p className="font-amiri hero-tagline" style={{fontSize:'clamp(1.1rem,2.5vw,1.4rem)', color:'var(--gold)', marginBottom:'36px', fontStyle:'italic', opacity:0.95}}>
             Un lieu convivial et engagé pour l'environnement
           </p>
-          <div style={{display:'flex', alignItems:'center', justifyContent:'center', gap:'8px', marginBottom:'36px'}}>
+          <div className="hero-rating" style={{display:'flex', alignItems:'center', justifyContent:'center', gap:'8px', marginBottom:'36px'}}>
             <div style={{display:'flex', gap:'2px'}}>
               <span className="star">★</span><span className="star">★</span><span className="star">★</span><span className="star">★</span><span className="star">★</span>
             </div>
-            <span style={{color:'rgba(255,255,255,0.7)', fontSize:'0.82rem'}}>Cadre exceptionnel à Mohammedia</span>
+            <span className="hero-rating-text" style={{color:'rgba(255,255,255,0.7)', fontSize:'0.82rem'}}>Cadre exceptionnel à Mohammedia</span>
           </div>
-          <div style={{display:'flex', flexWrap:'wrap', gap:'12px', justifyContent:'center'}}>
+          <div className="hero-cta" style={{display:'flex', flexWrap:'wrap', gap:'12px', justifyContent:'center'}}>
             <a href="#menu" className="btn-primary" style={{fontSize:'0.9rem', padding:'14px 32px'}}>🍽️ Découvrir le Menu</a>
             <button onClick={openModal} className="btn-teal" style={{fontSize:'0.9rem', padding:'14px 32px'}}>📅 Réserver l'Espace</button>
             <a href="#durabilite" className="btn-outline" style={{fontSize:'0.9rem', padding:'14px 32px'}}>🌿 Notre Engagement</a>
           </div>
-          <div style={{marginTop:'50px', display:'flex', flexDirection:'column', alignItems:'center', gap:'6px', opacity:0.5}}>
+          <div className="hero-scroll-indicator" style={{marginTop:'50px', display:'flex', flexDirection:'column', alignItems:'center', gap:'6px', opacity:0.5}}>
             <span style={{color:'#fff', fontSize:'0.72rem', letterSpacing:'0.1em', textTransform:'uppercase'}}>Défiler</span>
             <div style={{width:'1px', height:'40px', background:'linear-gradient(to bottom,rgba(255,255,255,0.6),transparent)'}}></div>
           </div>

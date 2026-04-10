@@ -141,6 +141,142 @@ body {
   }
 }
 
+@media (max-width: 360px) {
+  .home-navbar-shell {
+    padding: 0 10px !important;
+  }
+
+  .home-navbar-inner {
+    height: 64px !important;
+    gap: 6px !important;
+  }
+
+  .home-navbar-brand {
+    max-width: calc(100% - 46px);
+    gap: 6px !important;
+  }
+
+  .home-navbar-logo {
+    height: 42px !important;
+  }
+
+  .home-navbar-brand-text .nav-logo-text {
+    font-size: 0.9rem !important;
+  }
+
+  .home-navbar-brand-text .nav-logo-sub {
+    display: none !important;
+  }
+
+  .home-hamburger {
+    width: 40px !important;
+    height: 40px !important;
+    padding: 8px !important;
+    border-radius: 10px !important;
+  }
+
+  #hero {
+    min-height: 100svh;
+  }
+
+  #hero .hero-content {
+    padding: 14px !important;
+    max-width: 100% !important;
+  }
+
+  .hero-badge-wrap {
+    margin-bottom: 12px !important;
+  }
+
+  .hero-fm6e-badge {
+    font-size: 0.62rem !important;
+    line-height: 1.35;
+    gap: 4px;
+    padding: 4px 10px !important;
+    max-width: 100%;
+  }
+
+  .hero-fm6e-badge svg {
+    width: 10px;
+    height: 10px;
+    flex-shrink: 0;
+  }
+
+  .hero-title {
+    font-size: clamp(2rem, 10vw, 2.35rem) !important;
+    line-height: 1.1 !important;
+    margin-bottom: 10px !important;
+  }
+
+  .hero-subtitle {
+    font-size: 0.75rem !important;
+    letter-spacing: 0.14em !important;
+    margin-bottom: 10px !important;
+  }
+
+  .hero-tagline {
+    font-size: 1rem !important;
+    margin-bottom: 18px !important;
+  }
+
+  .hero-rating {
+    margin-bottom: 18px !important;
+    gap: 6px !important;
+    flex-wrap: wrap;
+  }
+
+  .hero-rating-text {
+    font-size: 0.72rem !important;
+  }
+
+  .hero-cta {
+    gap: 10px !important;
+  }
+
+  .hero-cta .btn-primary,
+  .hero-cta .btn-teal,
+  .hero-cta .btn-outline {
+    width: min(100%, 230px);
+    font-size: 0.83rem !important;
+    padding: 12px 18px !important;
+  }
+
+  .hero-scroll-indicator {
+    margin-top: 24px !important;
+  }
+}
+
+@media (max-width: 480px) and (max-height: 740px) {
+  #hero .hero-content {
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+  }
+
+  .hero-badge-wrap {
+    margin-bottom: 10px !important;
+  }
+
+  .hero-title {
+    margin-bottom: 8px !important;
+  }
+
+  .hero-subtitle {
+    margin-bottom: 8px !important;
+  }
+
+  .hero-tagline {
+    margin-bottom: 14px !important;
+  }
+
+  .hero-rating {
+    margin-bottom: 14px !important;
+  }
+
+  .hero-scroll-indicator {
+    margin-top: 16px !important;
+  }
+}
+
 /* ===== HERO ===== */
 #hero {
   min-height: 100vh;
